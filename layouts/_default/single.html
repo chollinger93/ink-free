@@ -19,6 +19,16 @@
 					<h1 class="title">{{ .Title }}</h1>
 				</div>
 			</div>
+
+			
+			{{ if and (gt .WordCount 400 ) (.Site.Params.toc) }}
+			<aside>
+				<header>
+				<h2>Contents</h2>
+				</header>
+				{{.TableOfContents}}
+			</aside>
+			{{ end }}
 					
 			<div class="markdown">
 				{{ .Content }}
@@ -37,7 +47,7 @@
 			</div>
 
 			<div class="back">
-				<a href="{{ $.Site.BaseURL }}">Back</a>
+				<a href="{{ $.Site.BaseURL }}"><span aria-hidden="true">← Back</span></a>
 			</div>
 
 			{{- if .Site.DisqusShortname -}}
