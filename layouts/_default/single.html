@@ -19,6 +19,16 @@
 					<h1 class="title">{{ .Title }}</h1>
 				</div>
 			</div>
+
+			
+			{{ if and (gt .WordCount 400 ) (.Site.Params.toc) }}
+			<aside>
+				<header>
+				<h2>Contents</h2>
+				</header>
+				{{.TableOfContents}}
+			</aside>
+			{{ end }}
 					
 			<div class="markdown">
 				{{ .Content }}
@@ -29,11 +39,23 @@
 					{{ if gt .Params.tags 0 }}
 						<ul class="flat">
 							{{ range .Params.tags }}
-							<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+							<li class="tag-li"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
 							{{ end }}
 						</ul>
 					{{ end }}
 				{{ end }}
+			</div>
+
+			<div class="back">
+				{{ if isset .Site.Params "footers" }}
+					{{ if ne .Type "page" }}
+					Next time, we'll talk about <i>"{{ range .Site.Params.footers | shuffle | first 1 }}{{ . }}"</i>{{ end }}
+					{{ end }}
+				{{ end }}
+			</div>
+
+			<div class="back">
+				<a href="{{ $.Site.BaseURL }}"><span aria-hidden="true">← Back</span></a>
 			</div>
 
 			{{- if .Site.DisqusShortname -}}

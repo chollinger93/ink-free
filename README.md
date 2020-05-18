@@ -1,5 +1,19 @@
 # Ink
+
 Crisp, minimal personal website and blog theme Hugo. Forked from [Ezhil](https://github.com/vividvilla/ezhil).
+
+## FORK
+**Forked from [knadh](https://github.com/knadh/hugo-ink) with custom adjustments**
+- Removed all references to Google's font-CDN
+- Removed Analytics code, even if it was controlled by a variable
+- Modified the CSS to
+  - Order all tags inline, as opposed to as a list
+  - Change the background color for Syntax Highlighting, otherwise we're looking at grey code on a grey background
+  - Added some classes for a Back button
+- Added a Back button to all posts
+- Added a TOC, controlled by a variable, to all posts
+- Added a word count, tags, and an approximate read time to the overview
+- Added random footer messages
 
 ## Demo
 [View demo](https://hugo-ink.netlify.com)
