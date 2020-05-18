@@ -86,9 +86,11 @@ table tbody + tbody {
   border-top: 2px solid #dee2e6;
 }
 
+/* Breaks gists
 table tbody tr:nth-of-type(even) {
   background-color: rgba(0, 0, 0, 0.15);
 }
+*/
 
 table th {
   background-color: #212529;
