@@ -12,6 +12,7 @@ Crisp, minimal personal website and blog theme Hugo. Forked from [Ezhil](https:/
   - Added some classes for a Back button
 - Added a Back button to all posts
 - Added a TOC, controlled by a variable, to all posts
+- Added a word count, tags, and an approximate read time to the overview
 
 ## Demo
 [View demo](https://hugo-ink.netlify.com)

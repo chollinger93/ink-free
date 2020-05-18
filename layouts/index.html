@@ -22,6 +22,12 @@
 								<h4 class="title small">
 									<a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a>
 								</h4>
+								<h4 class="title small smaller">
+									{{ .WordCount }} words, ~{{ div .WordCount 250 }} min read 
+								</h4>
+								<h4 class="title small smaller">
+									{{ .Params.Tags }}
+								</h4>
 								<span class="description">
 									{{ if isset .Params "description" }}
 										{{ .Description }}
