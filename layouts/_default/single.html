@@ -36,6 +36,10 @@
 				{{ end }}
 			</div>
 
+			<div class="back">
+				<a href="{{ $.Site.BaseURL }}">Back</a>
+			</div>
+
 			{{- if .Site.DisqusShortname -}}
 			{{- $.Scratch.Set "isDisqus" true -}}
 

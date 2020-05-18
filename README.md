@@ -1,4 +1,7 @@
 # Ink
+
+**Forked from [knadh](https://github.com/knadh/hugo-ink) with custom adjustments**
+
 Crisp, minimal personal website and blog theme Hugo. Forked from [Ezhil](https://github.com/vividvilla/ezhil).
 
 ## Demo
