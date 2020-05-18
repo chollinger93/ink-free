@@ -23,10 +23,16 @@
 									<a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a>
 								</h4>
 								<h4 class="title small smaller">
-									{{ .WordCount }} words, ~{{ div .WordCount 250 }} min read 
+									{{ .WordCount }} words, ~{{ div .WordCount .Site.Params.wpm  }} min read 
 								</h4>
 								<h4 class="title small smaller">
-									{{ .Params.Tags }}
+									{{ if gt .Params.tags 0 }}
+										<ul class="flat">
+											{{ range first .Site.Params.maxTags .Params.tags }}
+											<li class="tag-li"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+											{{ end }}
+										</ul>
+									{{ end }}
 								</h4>
 								<span class="description">
 									{{ if isset .Params "description" }}
