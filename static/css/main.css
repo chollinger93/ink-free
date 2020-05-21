@@ -208,7 +208,7 @@ ul {
 }
 
 .highlight {
-    background: 0 0;
+    /* background: 0 0; */
     font-size: 0.8em;
     
 }
@@ -478,4 +478,8 @@ ul {
 .back {
     padding-top: 1em;
     font-size: 1em;
+}
+
+.toc {
+    line-height: normal;
 }

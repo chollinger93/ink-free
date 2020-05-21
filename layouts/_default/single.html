@@ -22,7 +22,7 @@
 
 			
 			{{ if and (gt .WordCount 400 ) (.Site.Params.toc) }}
-			<aside>
+			<aside class="toc">
 				<header>
 				<h2>Contents</h2>
 				</header>
@@ -45,6 +45,12 @@
 					{{ end }}
 				{{ end }}
 			</div>
+
+			{{ if isset .Site.Params "github" }}
+			<div class="back">
+				<a href="{{ .Site.Params.github }}/blob/master/content/{{ .File.Path }}" title="github"><i data-feather="github"></i> Edit this on GitHub</a>
+			</div>
+			{{ end }}
 
 			<div class="back">
 				{{ if isset .Site.Params "footers" }}

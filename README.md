@@ -14,6 +14,7 @@ Crisp, minimal personal website and blog theme Hugo. Forked from [Ezhil](https:/
 - Added a TOC, controlled by a variable, to all posts
 - Added a word count, tags, and an approximate read time to the overview
 - Added random footer messages
+- Added "Edit this on GitHub" button
 
 ## Demo
 [View demo](https://hugo-ink.netlify.com)
