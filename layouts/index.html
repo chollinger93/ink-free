@@ -27,7 +27,7 @@
 								</h4>
 								<h4 class="title small smaller">
 									{{ if gt .Params.tags 0 }}
-										<ul class="flat">
+										<ul class="tags flat">
 											{{ range first .Site.Params.maxTags .Params.tags }}
 											<li class="tag-li"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
 											{{ end }}
