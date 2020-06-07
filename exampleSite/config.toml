@@ -1,33 +1,40 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "Ink"
-theme = "ink"
+title = "Ink-Free"
+theme = "ink-free"
 paginate = 5
 
 copyright = "© Copyright notice"
 
-pygmentsstyle = "vs"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
-
-googleAnalytics = "UA-123-45"
-disqusShortname = "ink-demo"
+[permalinks]
+  posts = "/:year/:month/:title"
 
 [params]
-	subtitle = "Crisp, minimal personal [blog theme for Hugo](https://github.com/knadh/hugo-ink)"
+	subtitle = "Crisp, minimal, privacy-conscious personal [blog theme for Hugo](https://github.com/otter-in-a-suit/ink-free)"
 
 	# Optional 64x64 avatar image.
-	avatar = "https://image.freepik.com/free-vector/young-man-head-with-beard-avatar-character_24877-36786.jpg"
+	#avatar = "https://image.freepik.com/free-vector/young-man-head-with-beard-avatar-character_24877-36786.jpg"
 
-	# Content types to disable Disqus on.
-	disableDisqusTypes = ["page"]
-	
-	featherIconsCDN = true
+	featherIconsCDN = false
 
-	mode = "auto" # "dark" or "auto"
-	# customCSS = "css/custom.css"  # Custom CSS applied to default styles.
-	# customDarkCSS = "css/custom-dark.css"  # Custom styles applied to dark mode css.
-	# customJS = ["js/custom.js", "js/custom1.js"]  # Custom JS scripts.
+	# Enable a table of contents
+	toc = true
+
+	# Max tags
+  	maxTags = 7
+
+  	# Define words per minute to approximate reading time
+  	wpm = 250
+
+	# Stupid footers :)
+	footers = [ 
+		"What Tiger King can teach us about x86 Assembly",
+		"10 Reasons why gcc SHOULD be re-written in JavaScript - You won't believe #8!"
+	]
+
+	# Github base url
+  	github = "https://github.com/otter-in-a-suit/ink-free"
+
 
 # Nav.
 [[menu.main]]
@@ -53,7 +60,7 @@ weight = 4
 [[params.social]]
 name = "Github"
 icon = "github"
-url = "https://github.com/knadh/hugo-ink"
+url = "https://github.com/otter-in-a-suit/"
 
 [[params.social]]
 name = "RSS"
@@ -62,3 +69,20 @@ url = "/index.xml"
 
 [taxonomies]
    tag = "tags"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "paraiso-dark"
+    tabWidth = 4
+
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = true
+    startLevel = 2 
