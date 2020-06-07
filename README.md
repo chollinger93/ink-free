@@ -25,6 +25,10 @@ And some **bugfixes**:
   - Change the background color for Syntax Highlighting, otherwise we're looking at grey code on a grey background
   - Added some classes for a Back button
 
+It is also missing several features, which might be added later:
+- Dark mode
+- Tests against optional configurations
+
 ## Demo
 ![Screenshot](images/screenshot.png "Ink-Free theme")
 
@@ -54,7 +58,7 @@ cd into your hugo site's root directory and:
 
 ```sh
 cd themes
-git clone https://github.com/otter-in-a-suit/ink-free
+git submodule add https://github.com/otter-in-a-suit/ink-free 
 ```
 
 For more information read the [official setup guide](https://gohugo.io/overview/installing/) of Hugo.
