@@ -58,7 +58,7 @@ cd into your hugo site's root directory and:
 
 ```sh
 cd themes
-git submodule add https://github.com/otter-in-a-suit/ink-free 
+git submodule add https://github.com/chollinger93/ink-free 
 ```
 
 For more information read the [official setup guide](https://gohugo.io/overview/installing/) of Hugo.

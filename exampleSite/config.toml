@@ -10,7 +10,7 @@ copyright = "© Copyright notice"
   posts = "/:year/:month/:title"
 
 [params]
-	subtitle = "Crisp, minimal, privacy-conscious personal [blog theme for Hugo](https://github.com/otter-in-a-suit/ink-free)"
+	subtitle = "Crisp, minimal, privacy-conscious personal [blog theme for Hugo](https://github.com/chollinger93/ink-free)"
 
 	# Optional 64x64 avatar image.
 	#avatar = "https://image.freepik.com/free-vector/young-man-head-with-beard-avatar-character_24877-36786.jpg"
@@ -33,7 +33,7 @@ copyright = "© Copyright notice"
 	]
 
 	# Github base url
-  	github = "https://github.com/otter-in-a-suit/ink-free"
+  	github = "https://github.com/chollinger93/ink-free"
 
 
 # Nav.
@@ -60,7 +60,7 @@ weight = 4
 [[params.social]]
 name = "Github"
 icon = "github"
-url = "https://github.com/otter-in-a-suit/"
+url = "https://github.com/chollinger93/"
 
 [[params.social]]
 name = "RSS"
