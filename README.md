@@ -17,6 +17,7 @@ As well as some additional **features**:
 - Added random footer messages
 - Added "Edit this on GitHub" button
 - Added `inlineimg` shortcode to render images (e.g. SVGs) in-line
+- Added support for `![](image title="title")` syntax for image titles
 - Random, somewhat humorous messages at the end of each post
 
 And some **bugfixes**:

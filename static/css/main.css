@@ -489,3 +489,14 @@ ul {
     max-width: 100%;
     display: inline-block !important;
 }
+
+.figcaption-img {
+    margin-bottom: 0px;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    display: block;
+    text-align: center;
+    color: gray;
+}
