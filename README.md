@@ -26,9 +26,8 @@ And some **bugfixes**:
   - Change the background color for Syntax Highlighting, otherwise we're looking at grey code on a grey background
   - Added some classes for a Back button
 
-It is also missing several features, which might be added later:
+It is also missing some features, which might be added later:
 - Dark mode
-- Tests against optional configurations
 
 ## Demo
 ![Screenshot](images/screenshot.png "Ink-Free theme")
@@ -48,7 +47,7 @@ hugo serve  --themesDir ../..
 * Custom CSS/JS
 * Multilingual months support
 * Custom TOC
-* In-Line images
+* In-Line images w/ Titles
 * Random footer messages
 * "Edit this on GitHub" button
 * Word count, tags, and an approximate read time in the overview

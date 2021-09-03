@@ -3,13 +3,18 @@
 
 name = "Ink"
 license = "MIT"
-licenselink = "https://github.com/knadh/ink/blob/master/LICENSE.md"
+licenselink = "https://github.com/chollinger93/ink-free/blob/master/LICENSE.md"
 description = "Crisp, minimal personal website and blog theme Hugo."
 homepage = "https://github.com/knadh/hugo-ink"
-tags = ["minimal", "clean", "blog", "responsive", "personal", "simple", "minimalist", "portfolio", "dark"]
-features = ["blog", "Clean and minimal", "Responsive", "Social media links", "Syntax highlighting", "Dark mode"]
+tags = ["minimal", "clean", "blog", "responsive", "personal", "simple", "minimalist", "portfolio", "dark", "privacy"]
+features = ["blog", "Clean and minimal", "Responsive", "Social media links", "Syntax highlighting", "Privacy", "GitHub integration", "Random Footers", "Reading Time"]
 min_version = "0.37.0"
 
 [author]
-  name = "Kailash Nadh"
+  name = "Christian Hollinger"
+  homepage = "https://chollinger.com"
+
+[original]
+  author = "Kailash Nadh"
   homepage = "https://nadh.in"
+  repo = "https://github.com/knadh/hugo-ink"
