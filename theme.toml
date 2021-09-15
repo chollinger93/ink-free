@@ -1,7 +1,7 @@
 # theme.toml template for a Hugo theme
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
-name = "Ink"
+name = "ink-free"
 license = "MIT"
 licenselink = "https://github.com/chollinger93/ink-free/blob/master/LICENSE.md"
 description = "Crisp, minimal personal website and blog theme Hugo."

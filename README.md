@@ -30,10 +30,10 @@ It is also missing some features, which might be added later:
 - Dark mode
 
 ## Demo
-![Screenshot](images/screenshot.png "Ink-Free theme")
+![Screenshot](https://raw.githubusercontent.com/chollinger93/ink-free/master/images/screenshot.png "Ink-Free theme")
 
 
-![Screenshot](images/screenshot2.png "Ink-Free theme")
+![Screenshot](https://raw.githubusercontent.com/chollinger93/ink-free/master/images/screenshot2.png "Ink-Free theme")
 
 ### Run the example
 ```
