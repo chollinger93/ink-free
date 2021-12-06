@@ -1,14 +1,29 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
+<<<<<<< Updated upstream
 title = "Ink-Free"
+=======
+title = "Ink"
+>>>>>>> Stashed changes
 theme = "ink-free"
 paginate = 5
 
 copyright = "© Copyright notice"
 
+<<<<<<< Updated upstream
 [permalinks]
   posts = "/:year/:month/:title"
 
+=======
+pygmentsstyle = "vs"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+googleAnalytics = "UA-123-45"
+disqusShortname = "ink-free-demo"
+# Demo only
+ignoreErrors = ["error-missing-instagram-accesstoken"]
+>>>>>>> Stashed changes
 [params]
 	subtitle = "Crisp, minimal, privacy-conscious personal [blog theme for Hugo](https://github.com/chollinger93/ink-free)"
 
@@ -35,6 +50,22 @@ copyright = "© Copyright notice"
 	# Github base url
   	github = "https://github.com/chollinger93/ink-free"
 
+<<<<<<< Updated upstream
+=======
+  #mode = "dark" # "dark" or "auto"
+  toc = true
+  # Max tags
+  maxTags = 7
+  # Define words per minute to approximate reading time
+  wpm = 250
+  
+  footers = [ 
+    "This is random example 1",
+    "This is random example 2"
+  ]
+  # Github base url
+  github = "https://github.com/chollinger93/ink-free"
+>>>>>>> Stashed changes
 
 # Nav.
 [[menu.main]]
@@ -60,7 +91,11 @@ weight = 4
 [[params.social]]
 name = "Github"
 icon = "github"
+<<<<<<< Updated upstream
 url = "https://github.com/chollinger93/"
+=======
+url = "https://github.com/chollinger93/ink-free"
+>>>>>>> Stashed changes
 
 [[params.social]]
 name = "RSS"
