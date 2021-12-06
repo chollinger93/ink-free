@@ -209,7 +209,7 @@ ul {
 }
 
 .highlight {
-    background: 0 0;
+    /* background: 0 0; */
     font-size: 0.8em;
 
 }
@@ -493,4 +493,25 @@ ul {
 .back {
     padding-top: 1em;
     font-size: 1em;
+}
+
+.toc {
+    line-height: normal;
+}
+
+.inline-img {
+    margin: 0 0 0 0 !important;
+    max-width: 100%;
+    display: inline-block !important;
+}
+
+.figcaption-img {
+    margin-bottom: 0px;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    display: block;
+    text-align: center;
+    color: gray;
 }

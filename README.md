@@ -1,32 +1,56 @@
-# Ink
+# Ink-Free
 
-Crisp, minimal personal website and blog theme Hugo. Forked from [Ezhil](https://github.com/vividvilla/ezhil).
+Crisp, minimal personal website and blog theme Hugo, designed for a collaborative, open-source, privacy conscious blog.
 
-## FORK
-**Forked from [knadh](https://github.com/knadh/hugo-ink) with custom adjustments**
+Forked from [knadh](https://github.com/knadh/hugo-ink) with custom adjustments. Originally forked from [Ezhil](https://github.com/vividvilla/ezhil).
+
+
+## Ink-Free vs Hugo-Ink
+This repository is a purely local (i.e., no CDNs), simplified version of `hugo-ink` with several **simplifications** for the sake of privacy:
 - Removed all references to Google's font-CDN
 - Removed Analytics code, even if it was controlled by a variable
-- Modified the CSS to
-  - Order all tags inline, as opposed to as a list
-  - Change the background color for Syntax Highlighting, otherwise we're looking at grey code on a grey background
-  - Added some classes for a Back button
+
+As well as some additional **features**:
 - Added a Back button to all posts
 - Added a TOC, controlled by a variable, to all posts
 - Added a word count, tags, and an approximate read time to the overview
 - Added random footer messages
+- Added "Edit this on GitHub" button
+- Added `inlineimg` shortcode to render images (e.g. SVGs) in-line
+- Added support for `![](image title="title")` syntax for image titles
+- Random, somewhat humorous messages at the end of each post
+
+And some **bugfixes**:
+- Modified the CSS to
+  - Order all tags inline, as opposed to as a list
+  - Change the background color for Syntax Highlighting, otherwise we're looking at grey code on a grey background
+  - Added some classes for a Back button
+
+It is also missing some features, which might be added later:
+- Dark mode
 
 ## Demo
-[View demo](https://hugo-ink.netlify.com)
-![Screenshot](https://user-images.githubusercontent.com/547147/69119000-3ace9280-0abb-11ea-81bc-5af68433e845.png "Ink light theme")
+![Screenshot](https://raw.githubusercontent.com/chollinger93/ink-free/master/images/screenshot.png "Ink-Free theme")
+
+
+![Screenshot](https://raw.githubusercontent.com/chollinger93/ink-free/master/images/screenshot2.png "Ink-Free theme")
+
+### Run the example
+```
+cd exampleSite
+hugo serve  --themesDir ../..
+```
 
 ## Features
-* Google Analytics integration
 * Syntax highlighting
-* Twitter cards and opengraph tags support
-* Disqus comments
 * RSS feeds
 * Custom CSS/JS
 * Multilingual months support
+* Custom TOC
+* In-Line images w/ Titles
+* Random footer messages
+* "Edit this on GitHub" button
+* Word count, tags, and an approximate read time in the overview
 
 ## Installation
 
@@ -34,7 +58,7 @@ cd into your hugo site's root directory and:
 
 ```sh
 cd themes
-git clone https://github.com/knadh/hugo-ink.git
+git submodule add https://github.com/chollinger93/ink-free 
 ```
 
 For more information read the [official setup guide](https://gohugo.io/overview/installing/) of Hugo.
@@ -80,6 +104,9 @@ EOF
 
 ## Credits
 
+* [knadh](https://github.com/knadh/hugo-ink), who created hugo-ink
 * [Ezhil theme](https://github.com/vividvilla/ezhil) from which Ink was forked
 
+
+## License
 Licensed under the MIT license.

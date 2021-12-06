@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html {{- if (eq .Site.Params.mode "dark") -}}class="dark"{{ end }}>
+<!-- <html {{- if (eq .Site.Params.mode "dark") -}}class="dark"{{ end }}> -->
 {{ partial "header.html" . }}
 <body>
 	<div class="container wrapper">
@@ -27,7 +27,7 @@
 								</h4>
 								<h4 class="title small smaller">
 									{{ if gt .Params.tags 0 }}
-										<ul class="flat">
+										<ul class="tags flat">
 											{{ range first .Site.Params.maxTags .Params.tags }}
 											<li class="tag-li"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
 											{{ end }}
