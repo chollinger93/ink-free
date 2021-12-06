@@ -11,11 +11,12 @@ a {
     text-decoration: none;
     word-break: break-word;
 }
-    a:hover {
-        border-bottom: 2px solid #3700ff;
-    }
 
-html,button,input,select,textarea {
+a:hover {
+    border-bottom: 2px solid #3700ff;
+}
+
+html, button, input, select, textarea {
     color: #333;
 }
 
@@ -47,7 +48,7 @@ img {
 }
 
 a img {
-    border:none;
+    border: none;
 }
 
 figure {
@@ -62,28 +63,28 @@ fieldset {
 }
 
 table {
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  -webkit-overflow-scrolling: touch;
-  background-color: transparent;
-  margin-bottom: 1rem;
-  overflow-x: auto;
-  width: 100%;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+    background-color: transparent;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    width: 100%;
 }
 
 table th,
 table td {
-  border-bottom: 1px solid #dee2e6;
-  padding: 0.75rem;
-  vertical-align: top;
+    border-bottom: 1px solid #dee2e6;
+    padding: 0.75rem;
+    vertical-align: top;
 }
 
 table thead th {
-  border-bottom: 2px solid #dee2e6;
-  vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    vertical-align: bottom;
 }
 
-table tbody + tbody {
-  border-top: 2px solid #dee2e6;
+table tbody+tbody {
+    border-top: 2px solid #dee2e6;
 }
 
 /* Breaks gists
@@ -93,9 +94,9 @@ table tbody tr:nth-of-type(even) {
 */
 
 table th {
-  background-color: #212529;
-  border-color: #32383e;
-  color: #fff;
+    background-color: #212529;
+    border-color: #32383e;
+    color: #fff;
 }
 
 textarea {
@@ -106,7 +107,7 @@ blockquote {
     margin-left: 1rem;
     font-style: italic;
     font-size: 1.4rem;
-    font-family: Georgia,bitstream charter,serif;
+    font-family: Georgia, bitstream charter, serif;
     border-left: 3px solid;
     border-color: #3700ff;
     padding-left: 20px;
@@ -204,13 +205,13 @@ ul {
     margin-bottom: 0;
     margin-top: 0;
     padding: 20px;
-    background-color: black !important;
+    /* background-color: black !important; */
 }
 
 .highlight {
     background: 0 0;
     font-size: 0.8em;
-    
+
 }
 
 .wrapper {
@@ -232,23 +233,27 @@ ul {
     float: left;
     margin: -25px 20px 0 0;
 }
+
 .header .avatar img {
     width: 64px;
     height: 64px;
     overflow: hidden;
     border-radius: 100%;
 }
+
 .header .site-title {
     margin: 0 0 10px 0;
     line-height: 0.2em;
 }
-    .site-title a {
-        color: #333;
-        text-decoration: none !important;
-    }
-    .site-title a:hover {
-        border-bottom-width: 3px;
-    }
+
+.site-title a {
+    color: #333;
+    text-decoration: none !important;
+}
+
+.site-title a:hover {
+    border-bottom-width: 3px;
+}
 
 .header .site-description {
     display: flex;
@@ -271,12 +276,14 @@ ul {
     list-style: none;
     margin: 0 30px 0 0;
 }
-    .header nav.social a {
-        color: #333;
-    }
-    .header nav.social a:hover {
-        color: #3700ff;
-    }
+
+.header nav.social a {
+    color: #333;
+}
+
+.header nav.social a:hover {
+    color: #3700ff;
+}
 
 .header .site-description nav {
     margin: 0;
@@ -324,11 +331,13 @@ ul {
 .post-header {
     display: flex;
 }
+
 .post-header .meta .date {
     margin-right: 30px;
     width: 64px;
     text-align: center;
 }
+
 .post-header .meta .date .day {
     font-family: "Playfair Display", serif;
     font-weight: 700;
@@ -337,10 +346,12 @@ ul {
     display: block;
     margin-bottom: 20px;
 }
+
 .post-header .meta .date .rest {
     display: block;
     font-size: 0.75em;
 }
+
 .post-header h1.title {
     margin: -10px 0 0 0;
 }
@@ -348,6 +359,7 @@ ul {
 .post .title.small {
     margin: 0 0 10px 0;
 }
+
 .post .post-header {
     margin-bottom: 30px;
 }
@@ -386,12 +398,14 @@ ul {
     margin-top: 40px;
     padding: 15px 0;
 }
-    .footer a {
-        color: #666;
-    }
-    .footer a:hover {
-        color: #3700ff;
-    }
+
+.footer a {
+    color: #666;
+}
+
+.footer a:hover {
+    color: #3700ff;
+}
 
 .tag-cloud {
     margin-top: 20px;
@@ -457,22 +471,23 @@ ul {
     .header .nav.social li {
         margin: 0;
     }
+
     .header .nav li {
         margin: 0 10px 0 0;
         font-size: 14px;
     }
 
     table {
-      -ms-overflow-style: -ms-autohiding-scrollbar;
-      -webkit-overflow-scrolling: touch;
-      display: block;
-      overflow-x: auto;
-      width: 100%;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        -webkit-overflow-scrolling: touch;
+        display: block;
+        overflow-x: auto;
+        width: 100%;
     }
 }
 
 .tag-li {
-    display:inline !important;
+    display: inline !important;
 }
 
 .back {
