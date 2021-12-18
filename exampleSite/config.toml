@@ -5,6 +5,8 @@ theme = "ink-free"
 paginate = 5
 
 copyright = "© Copyright notice"
+# Demo only
+#ignoreErrors = ["error-missing-instagram-accesstoken"]
 
 [permalinks]
   posts = "/:year/:month/:title"
@@ -23,8 +25,8 @@ copyright = "© Copyright notice"
 	# Max tags
   	maxTags = 7
 
-  	# Define words per minute to approximate reading time
-  	wpm = 250
+  # Define words per minute to approximate reading time
+  wpm = 250
 
 	# Stupid footers :)
 	footers = [ 
@@ -79,7 +81,7 @@ url = "/index.xml"
     lineNos = true
     lineNumbersInTable = true
     noClasses = true
-    style = "paraiso-dark"
+    style = "dracula"
     tabWidth = 4
 
   [markup.tableOfContents]

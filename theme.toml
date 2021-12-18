@@ -8,7 +8,7 @@ description = "Crisp, minimal personal website and blog theme Hugo."
 homepage = "https://github.com/knadh/hugo-ink"
 tags = ["minimal", "clean", "blog", "responsive", "personal", "simple", "minimalist", "portfolio", "dark", "privacy"]
 features = ["blog", "Clean and minimal", "Responsive", "Social media links", "Syntax highlighting", "Privacy", "GitHub integration", "Random Footers", "Reading Time"]
-min_version = "0.37.0"
+min_version = "0.87.0"
 
 [author]
   name = "Christian Hollinger"
