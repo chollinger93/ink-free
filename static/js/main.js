@@ -15,20 +15,23 @@ document.addEventListener("DOMContentLoaded", function(){
     scheme = savedScheme;
   }
 
-  if(scheme == "dark") {
-    darkscheme(toggle, container);
-  } else {
-    lightscheme(toggle, container);
-  }
-
-  toggle.addEventListener("click", () => {
-    if (toggle.className === "light") {
+  if (toggle) {
+    if(scheme == "dark") {
       darkscheme(toggle, container);
-    } else if (toggle.className === "dark") {
-      lightscheme(toggle, container);
+    } else {
+        lightscheme(toggle, container);
     }
-  });
+
+    toggle.addEventListener("click", () => {
+      if (toggle.className === "light") {
+        darkscheme(toggle, container);
+      } else if (toggle.className === "dark") {
+        lightscheme(toggle, container);
+      }
+    });
+  }
 });
+
 
 function darkscheme(toggle, container) {
   localStorage.setItem("scheme", "dark");
