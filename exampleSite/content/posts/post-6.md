@@ -2,6 +2,7 @@
 title: "Hugo shortcodes"
 date: 2021-07-04T12:13:36+05:30
 description: Here is a demo of all shortcodes available in Hugo.
+tags: [markdown]
 ---
 
 ## Images
