@@ -81,7 +81,7 @@ url = "/index.xml"
     lineNos = true
     lineNumbersInTable = true
     noClasses = true
-    style = "dracula"
+    style = "github"
     tabWidth = 4
 
   [markup.tableOfContents]

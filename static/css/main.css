@@ -515,3 +515,10 @@ figcaption {
     text-align: center;
     color: gray;
 }
+
+code:not(pre *)  {
+    font-family: monospace;
+    font-size: 1em;
+    background-color: rgb(239, 241, 243);
+    font-size: 95%;
+}
