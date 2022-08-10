@@ -69,3 +69,8 @@ html.dark .footer {
 html.dark .highlight {
   background-color: #333;
 }
+
+html.dark .header .site-description .scheme-toggle a.dark svg {
+    fill: #f8e04f;
+    color: #f8e04f;
+}
