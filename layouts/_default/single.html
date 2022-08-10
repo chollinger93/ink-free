@@ -21,7 +21,7 @@
 			</div>
 
 			
-			{{ if and (gt .WordCount 400 ) (.Site.Params.toc) }}
+			{{ if and (gt .WordCount 400 ) (.Site.Params.toc) (ne .Params.toc false) }}
 			<aside class="toc">
 				<header>
 				<h2>Contents</h2>
