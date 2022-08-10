@@ -16,13 +16,12 @@
 				{{- range $index, $key := .Site.Params.Social -}}
 					<li><a href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a></li>
 				{{- end -}}
+
+				{{- if or (eq .Site.Params.mode "auto") (eq .Site.Params.mode "dark") -}}
+                			<span class="scheme-toggle"><a href="#" id="scheme-toggle"></a>
+				{{- end -}}
 			</ul>
 		</nav>
-		<!-- Disabled
-                {{- if or (eq .Site.Params.mode "auto") (eq .Site.Params.mode "dark") -}}
-                <span class="scheme-toggle"><a href="#" id="scheme-toggle"></a>
-				{{- end -}}
-				-->
 	</div>
 
 	<nav class="nav">
