@@ -19,14 +19,17 @@ copyright = "© Copyright notice"
 
 	featherIconsCDN = false
 
+	# Site color - dark/light/auto
+	mode = "auto"
+
 	# Enable a table of contents
 	toc = true
 
 	# Max tags
-  	maxTags = 7
+	maxTags = 7
 
-  # Define words per minute to approximate reading time
-  wpm = 250
+	# Define words per minute to approximate reading time
+	wpm = 250
 
 	# Stupid footers :)
 	footers = [ 
@@ -35,7 +38,7 @@ copyright = "© Copyright notice"
 	]
 
 	# Github base url
-  	github = "https://github.com/chollinger93/ink-free"
+	github = "https://github.com/chollinger93/ink-free"
 
 
 # Nav.
