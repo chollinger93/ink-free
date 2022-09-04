@@ -1,41 +1,43 @@
-function toggleDarkMode() {
-    var theme = localStorage.getItem('scheme');
-    var toggle = document.getElementById('scheme-toggle');
-    var container = document.getElementsByTagName("html")[0];
+"use strict";
 
-    if (theme == 'dark') {
+function toggleDarkMode() {
+    var theme = localStorage.getItem("scheme"),
+        toggle = document.getElementById("scheme-toggle"),
+        container = document.getElementsByTagName("html")[0];
+
+    if (theme === "dark") {
         toggle.innerHTML = feather.icons.sun.toSvg();
-        container.className = 'dark';
+        container.className = "dark";
     } else {
         toggle.innerHTML = feather.icons.moon.toSvg();
-        container.className = '';
+        container.className = "";
     }
 }
 
-document.addEventListener('DOMContentLoaded', function(){
-    const globalDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const localMode = localStorage.getItem('scheme');
-    const mode = document.getElementById('scheme-toggle');
+document.addEventListener("DOMContentLoaded", function () {
+    const globalDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const localMode = localStorage.getItem("scheme");
+    const mode = document.getElementById("scheme-toggle");
 
     if (globalDark && (localMode === null)) {
-        localStorage.setItem('scheme', 'dark');
+        localStorage.setItem("scheme", "dark");
     }
 
     if (mode !== null) {
         toggleDarkMode();
 
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (event) {
             if (event.matches) {
-                localStorage.setItem('scheme', 'dark');
+                localStorage.setItem("scheme", "dark");
             } else {
-                localStorage.setItem('scheme', 'light');
+                localStorage.setItem("scheme", "light");
             }
 
             toggleDarkMode();
         });
 
-        mode.addEventListener('click', () => {
-            localStorage.setItem('scheme', document.documentElement.classList.contains('dark') ? 'light' : 'dark');
+        mode.addEventListener("click", function () {
+            localStorage.setItem("scheme", document.documentElement.classList.contains('dark') ? "light" : "dark");
             toggleDarkMode();
         });
     }
