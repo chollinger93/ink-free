@@ -1,48 +1,44 @@
-document.addEventListener("DOMContentLoaded", function(){
-  var toggle = document.getElementById("scheme-toggle");
+"use strict";
 
-  var scheme = "light";
-  var savedScheme = localStorage.getItem("scheme");
+function toggleDarkMode() {
+    var theme = localStorage.getItem("scheme"),
+        toggle = document.getElementById("scheme-toggle"),
+        container = document.getElementsByTagName("html")[0];
 
-  var container = document.getElementsByTagName("html")[0];
-  var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  if (prefersDark) {
-    scheme = "dark";
-  }
-
-  if(savedScheme) {
-    scheme = savedScheme;
-  }
-
-  if (toggle) {
-    if(scheme == "dark") {
-      darkscheme(toggle, container);
+    if (theme === "dark") {
+        toggle.innerHTML = feather.icons.sun.toSvg();
+        container.className = "dark";
     } else {
-        lightscheme(toggle, container);
+        toggle.innerHTML = feather.icons.moon.toSvg();
+        container.className = "";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const globalDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const localMode = localStorage.getItem("scheme");
+    const mode = document.getElementById("scheme-toggle");
+
+    if (globalDark && (localMode === null)) {
+        localStorage.setItem("scheme", "dark");
     }
 
-    toggle.addEventListener("click", () => {
-      if (toggle.className === "light") {
-        darkscheme(toggle, container);
-      } else if (toggle.className === "dark") {
-        lightscheme(toggle, container);
-      }
-    });
-  }
+    if (mode !== null) {
+        toggleDarkMode();
+
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (event) {
+            if (event.matches) {
+                localStorage.setItem("scheme", "dark");
+            } else {
+                localStorage.setItem("scheme", "light");
+            }
+
+            toggleDarkMode();
+        });
+
+        mode.addEventListener("click", function () {
+            localStorage.setItem("scheme", document.documentElement.classList.contains('dark') ? "light" : "dark");
+            toggleDarkMode();
+        });
+    }
 });
-
-
-function darkscheme(toggle, container) {
-  localStorage.setItem("scheme", "dark");
-  toggle.innerHTML = feather.icons.sun.toSvg();
-  toggle.className = "dark";
-  container.className = "dark";
-}
-
-function lightscheme(toggle, container) {
-  localStorage.setItem("scheme", "light");
-  toggle.innerHTML = feather.icons.moon.toSvg();
-  toggle.className = "light";
-  container.className = "";
-}

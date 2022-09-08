@@ -303,14 +303,6 @@ ul {
 
 .header .site-description .scheme-toggle a svg {
     max-height: 15px;
-}
-
-.header .site-description .scheme-toggle a.dark svg {
-    fill: #f8e04f;
-    color: #f8e04f;
-}
-
-.header .site-description .scheme-toggle a.light svg {
     fill: grey;
     color: black;
 }

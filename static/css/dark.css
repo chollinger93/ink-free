@@ -69,3 +69,17 @@ html.dark .footer {
 html.dark .highlight {
   background-color: #333;
 }
+
+html.dark .header .site-description .scheme-toggle a svg {
+    fill: #f8e04f !important;
+    color: #f8e04f !important;
+}
+
+html.dark td pre code {
+  color: #333;
+}
+
+html.dark code:not(pre *)  {
+  color: #ddd;
+  background-color: #333;
+}
