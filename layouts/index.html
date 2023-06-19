@@ -29,7 +29,7 @@
 							{{ $wordCountNoCode := replaceRE `(?s)<div class="highlight">.*?</div>` "" .Content |
 							countwords }}
 							<h4 class="title small smaller">
-								{{ $wordCountNoCode | lang.FormatNumberCustom 0 }} words, ~{{ div .WordCount
+								{{ $wordCountNoCode | lang.FormatNumberCustom 0 }} words, ~{{ div $wordCountNoCode
 								.Site.Params.wpm
 								}} min read
 							</h4>
