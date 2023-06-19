@@ -6,10 +6,14 @@ function toggleDarkMode() {
         container = document.getElementsByTagName("html")[0];
 
     if (theme === "dark") {
-        toggle.innerHTML = feather.icons.sun.toSvg();
+        if (typeof feather !== "undefined") {
+            toggle.innerHTML = feather.icons.sun.toSvg();
+        }
         container.className = "dark";
     } else {
-        toggle.innerHTML = feather.icons.moon.toSvg();
+        if (typeof feather !== "undefined") {
+            toggle.innerHTML = feather.icons.moon.toSvg();
+        }
         container.className = "";
     }
 }
