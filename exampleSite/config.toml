@@ -68,6 +68,11 @@ icon = "github"
 url = "https://github.com/chollinger93/"
 
 [[params.social]]
+name = "Twitter"
+icon = "twitter"
+url = "https://twitter.com/chollinger93/"
+
+[[params.social]]
 name = "RSS"
 icon = "rss"
 url = "/index.xml"
