@@ -1,0 +1,29 @@
+{{ $scratch := newScratch }}
+{{ range .Site.RegularPages }}
+{{ $wordCountNoCode := replaceRE `(?s)<div class="highlight">.*?</div>` "" .Content |
+countwords }}
+{{ $scratch.Add "wordcount" $wordCountNoCode }}
+{{ end }}
+{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+
+<h1>Statistics</h1>
+<p><b>{{ $scratch.Get "wordcount" | lang.NumFmt 0 }}</b> words published over {{len $pages }} articles since
+    {{ range last 1 $pages }}
+    {{ .Date.Month }} {{ .Date.Year }}.
+    {{ end }}
+</p>
+{{ $readingMins := div ($scratch.Get "wordcount") .Site.Params.wpm }}
+<p>Reading all that should take you about {{ $readingMins }} minutes
+    {{ if gt $readingMins 60 }}
+    (or ~{{div $readingMins 60.0 | lang.NumFmt 1 }} hrs).
+    {{else}}
+    .
+    {{end}}
+</p>
+<p>
+    For reference, that's about {{div ($scratch.Get "wordcount") (.Site.Params.referenceBookWords | default
+    95356.0 ) |
+    lang.NumFmt 1 }}x "{{
+    .Site.Params.referenceBook |
+    default "The Hobbit"}}" by {{ .Site.Params.referenceAuthor | default "J. R. R. Tolkien"}}.
+</p>

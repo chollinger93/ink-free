@@ -44,6 +44,11 @@ copyright = "© Copyright notice"
 	# Github base url
 	github = "https://github.com/chollinger93/ink-free"
 
+	# For statistics, we can compare the total word count against a book of your choice
+	statisticsEnabled = true
+	referenceBookWords = 11500.0
+	referenceBook = "The Metamorphosis"
+	referenceAuthor = "Franz Kafka"
 
 # Nav.
 [[menu.main]]
@@ -62,7 +67,7 @@ url = "/about"
 weight = 3
 
 [[menu.main]]
-name = "Tags"
+name = "Tags & Stats"
 url = "/tags"
 weight = 4
 
