@@ -6,13 +6,16 @@ Forked from [knadh](https://github.com/knadh/hugo-ink) with custom adjustments. 
 
 
 ## Ink-Free vs Hugo-Ink
-This repository is a purely local (i.e., no CDNs), simplified version of `hugo-ink` with several **simplifications** for the sake of privacy:
+This repository is a purely local (i.e., no CDNs[^1]), simplified version of `hugo-ink` with several **simplifications** for the sake of privacy:
 - Removed all references to Google's font-CDN
 - Removed Analytics code, even if it was controlled by a variable
 
 As well as some additional **features**:
 - Added a Back button to all posts
-- Added a TOC, controlled by a variable, to all posts
+- Added a Table of Contents (TOC), controlled by a variable, to all posts
+  - The TOC can either be static at the top
+  - Or floating on the side
+
 - Added a word count, tags, and an approximate read time to the overview
 - Added random footer messages
 - Added "Edit this on GitHub" button
@@ -26,14 +29,19 @@ And some **bugfixes**:
   - Change the background color for Syntax Highlighting, otherwise we're looking at grey code on a grey background
   - Added some classes for a Back button
 
-It is also missing some features, which might be added later:
-- Dark mode
-
 ## Demo
+
+### Overview
+
 ![Screenshot](https://raw.githubusercontent.com/chollinger93/ink-free/master/images/screenshot.png "Ink-Free theme")
 
-
 ![Screenshot](https://raw.githubusercontent.com/chollinger93/ink-free/master/images/screenshot2.png "Ink-Free theme")
+
+### Static vs Floating TOC
+
+![image-20230620114414684](images/floating_toc.png)
+
+![image-20230620114454738](images/static_toc.png)
 
 ### Run the example
 ```
@@ -110,3 +118,5 @@ EOF
 
 ## License
 Licensed under the MIT license.
+
+[^1]: Note that the Feather CDN can still be enabled, but you can also host it statically.
