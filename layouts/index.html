@@ -5,7 +5,6 @@
 <body>
 	<div class="container wrapper">
 		{{ partial "head.html" . }}
-
 		<div class="recent-posts section">
 			<div class="posts">
 				{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
