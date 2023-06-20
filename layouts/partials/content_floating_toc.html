@@ -4,12 +4,21 @@
         {{ partial "post_header.html" . }}
 
         <!-- The TOC will be static on mobile decides -->
-        <aside class="show-on-mobile toc">
+        {{ if and (gt .WordCount 400 ) (eq .Site.Params.toc "both") }}
+        <aside class="toc" id="static-toc">
             <header>
                 <h3>Contents</h3>
             </header>
             {{.TableOfContents}}
         </aside>
+        {{ else }}
+        <aside class="show-on-mobile toc" id="static-toc">
+            <header>
+                <h3>Contents</h3>
+            </header>
+            {{.TableOfContents}}
+        </aside>
+        {{ end }}
 
         {{ .Content }}
 

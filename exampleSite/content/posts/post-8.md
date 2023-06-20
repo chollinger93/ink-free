@@ -111,6 +111,9 @@ def make[F[_]: Sync: Parallel: ThrowableMonadError](cfg: ServiceConfig, client: 
 </html>
 {{< /highlight >}}
 
+### Inline code
+`Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum `
+
 ## List Types
 
 ### Ordered List

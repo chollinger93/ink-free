@@ -23,9 +23,11 @@ copyright = "© Copyright notice"
 	mode = "auto"
 
 	# Enable a table of contents:
-	# Either "static"/true, "floating", or "none"
+	# Either "static"/true, "floating", "both", or "none" (default: static)
 	# The floating TOC dissapears on mobile and adds 200px vertical space
-	toc = "floating"
+	toc = "both"
+	# Whether to truncate everything but H1/H2 headings if the last element in a TOC isn't visible. Enabled by default
+	enableTocTrunate = true
 
 	# Max tags
 	maxTags = 7

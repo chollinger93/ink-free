@@ -3,7 +3,7 @@
 
     <!-- Inline TOC -->
     {{ if and (gt .WordCount 400 ) (or (eq .Site.Params.toc "static") (eq .Site.Params.toc "true") )}}
-    <aside class="toc">
+    <aside class="toc" id="static-toc">
         <header>
             <h3>Contents</h3>
         </header>
