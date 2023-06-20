@@ -22,8 +22,10 @@ copyright = "© Copyright notice"
 	# Site color - dark/light/auto
 	mode = "auto"
 
-	# Enable a table of contents
-	toc = true
+	# Enable a table of contents:
+	# Either "static"/true, "floating", or "none"
+	# The floating TOC dissapears on mobile and adds 200px vertical space
+	toc = "floating"
 
 	# Max tags
 	maxTags = 7

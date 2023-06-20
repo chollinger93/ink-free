@@ -36,8 +36,9 @@
 							<h4 class="title small smaller">
 								{{ if gt .Params.tags 0 }}
 								<ul class="tags flat">
+									{{ $tagUrl := "/tags/"}}
 									{{ range first .Site.Params.maxTags .Params.tags }}
-									<li class="tag-li"><a href="{{ " /tags/" | relLangURL }}{{ . | urlize }}">{{ .
+									<li class="tag-li"><a href="{{ $tagUrl | relLangURL }}{{ . | urlize }}">{{ .
 											}}</a></li>
 									{{ end }}
 								</ul>

@@ -83,3 +83,8 @@ html.dark code:not(pre *)  {
   color: #ddd;
   background-color: #333;
 }
+
+html.dark .section-nav li.active > a {
+  font-weight: 600;
+  color: #ddd;
+}

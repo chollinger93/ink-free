@@ -1,0 +1,23 @@
+<!-- Inspired by https://iamsorush.com/posts/table-of-content-blog/ -->
+<div class="article-nav" id="article-nav-id">
+    <div class="post">
+        {{ partial "post_header.html" . }}
+
+        <!-- The TOC will be static on mobile decides -->
+        <aside class="show-on-mobile toc">
+            <header>
+                <h3>Contents</h3>
+            </header>
+            {{.TableOfContents}}
+        </aside>
+
+        {{ .Content }}
+
+    </div>
+    <nav class="hide-on-mobile section-nav">
+        {{ .TableOfContents }}
+    </nav>
+</div>
+<div class="post">
+    {{ partial "article_footer.html" . }}
+</div>
