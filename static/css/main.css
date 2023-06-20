@@ -197,6 +197,10 @@ ul {
     list-style: disc inside;
 }
 
+.post {
+    max-width: 800px;
+}
+
 .post ul li {
     margin-bottom: 10px;
 }
@@ -521,6 +525,7 @@ code:not(pre *)  {
     font-size: 1em;
     background-color: rgb(239, 241, 243);
     font-size: 95%;
+    white-space: normal;
 }
 
 code {
@@ -592,7 +597,32 @@ code {
 
   .section-nav a:hover,
 .section-nav a:focus {
+    border: none;
   color: #666;
   font-weight: 600;
 }
+
+  .depth-nested {
+    display: none;
+  }
+
+  /* Static TOC */
+  .toc a {
+    text-decoration: none;
+    display: block;
+    color: #515151;
+    transition: all 50ms ease-in-out; 
+  }
+
+  .toc li::marker {
+    color: #515151;
+  }
+
+  .toc a:hover,
+  .toc a:focus {
+    border: none;
+    color: #666;
+    font-weight: 600;
+  }
+  
 

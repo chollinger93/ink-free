@@ -35,13 +35,29 @@ And some **bugfixes**:
 
 ![Screenshot](https://raw.githubusercontent.com/chollinger93/ink-free/master/images/screenshot.png "Ink-Free theme")
 
-![Screenshot](https://raw.githubusercontent.com/chollinger93/ink-free/master/images/screenshot2.png "Ink-Free theme")
+![image-20230620151830930](images/screenshot2.png)
 
-### Static vs Floating TOC
+### Table Of Contents Options
+
+#### Floating
 
 ![image-20230620114414684](images/floating_toc.png)
 
-![image-20230620114454738](images/static_toc.png)
+#### Static
+
+![image-20230620151300448](images/static_toc.png)
+
+#### Both
+
+![image-20230620151006141](images/both_toc.png)
+
+#### Truncated
+
+![image-20230620151110164](images/truncated_toc.png)
+
+#### Mobile
+
+![image-20230620151645609](images/mobile_toc.png)
 
 ### Run the example
 ```

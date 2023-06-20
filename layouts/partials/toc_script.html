@@ -1,15 +1,25 @@
 <script>
+    var enableTruncate = {{ site.Params.enableTocTrunate | default true }}
+    var filterDepth = false;
+    const MAX_DEPTH = 9; // Only H2
+
+    // Highlight sidebar items
     window.addEventListener('DOMContentLoaded', () => {
         const observerForTableOfContentActiveState = new IntersectionObserver(entries => {
             entries.reverse().forEach(entry => {
                 const id = entry.target.getAttribute('id');
                 if (entry.intersectionRatio > 0) {
-                    clearActiveStatesInTableOfContents();
-                    initState = true;
                     var selected = document.querySelectorAll(`nav li a[href="#${id}"]`)
                     if (selected != null) {
                         selected.forEach(s => {
                             if (s != null) {
+                                var depth = getDepth(s.parentElement);
+                                if (filterDepth && depth <= MAX_DEPTH) {
+                                    clearActiveStatesInTableOfContents();
+                                    s.parentElement.classList.add('active')
+                                }
+                            } else if (!filterDepth) {
+                                clearActiveStatesInTableOfContents();
                                 s.parentElement.classList.add('active');
                             }
                         }
@@ -25,9 +35,79 @@
 
     });
 
+    // https://stackoverflow.com/questions/19669786/check-if-element-is-visible-in-dom
+    function isVisible(elem) {
+        if (!(elem instanceof Element)) return false; // throw Error('DomUtil: elem is not an element.');
+        const style = getComputedStyle(elem);
+        if (style.display === 'none') return false;
+        if (style.visibility !== 'visible') return false;
+        if (style.opacity < 0.1) return false;
+        if (elem.offsetWidth + elem.offsetHeight + elem.getBoundingClientRect().height +
+            elem.getBoundingClientRect().width === 0) {
+            return false;
+        }
+        const elemCenter = {
+            x: elem.getBoundingClientRect().left + elem.offsetWidth / 2,
+            y: elem.getBoundingClientRect().top + elem.offsetHeight / 2
+        };
+        if (elemCenter.x < 0) return false;
+        if (elemCenter.x > (document.documentElement.clientWidth || window.innerWidth)) return false;
+        if (elemCenter.y < 0) return false;
+        if (elemCenter.y > (document.documentElement.clientHeight || window.innerHeight)) return false;
+        let pointContainer = document.elementFromPoint(elemCenter.x, elemCenter.y);
+        do {
+            if (pointContainer === elem) return true;
+        } while (pointContainer = pointContainer.parentNode);
+        return false;
+    }
+
+
     function clearActiveStatesInTableOfContents() {
         document.querySelectorAll('nav li').forEach((section) => {
             section.classList.remove('active');
         });
     }
+
+    function getDepth(parentElement) {
+        var depth = 0;
+        while (parentElement !== null && parentElement.tagName.toLowerCase() !== 'ul') {
+            depth++;
+            parentElement = parentElement.parentElement;
+        }
+        return depth;
+    }
+
+    function navItems() {
+        // Only sidebar nav is nested twice
+        var nestedListItems = document.querySelectorAll('nav nav li a');
+        return Array.from(nestedListItems).filter(listItem =>
+            listItem.href != null && listItem.hash.startsWith("#")
+        )
+    }
+
+    function lasItemInNavBarVisible() {
+        var lastItem = navItems().slice(-1)[0]
+        return isVisible(lastItem)
+    }
+
+
+    // If the last element of the side navigation isn't visible, filter by depth
+    document.addEventListener('DOMContentLoaded', function () {
+        if (!enableTruncate) return;
+        var navBar = navItems()
+        console.log(navBar)
+        if (!lasItemInNavBarVisible()) {
+            filterDepth = true;
+            //console.log("Filtering nav bar")
+            navBar.forEach(function (listItem) {
+                var depth = getDepth(listItem.parentElement);
+
+                if (depth > MAX_DEPTH) {
+                    listItem.parentElement.classList.add('depth-nested');
+                }
+            });
+        }
+
+    });
+
 </script>
