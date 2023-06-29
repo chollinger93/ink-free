@@ -4,10 +4,10 @@
 name = "ink-free"
 license = "MIT"
 licenselink = "https://github.com/chollinger93/ink-free/blob/master/LICENSE.md"
-description = "Crisp, minimal personal website and blog theme Hugo."
-homepage = "https://github.com/knadh/hugo-ink"
-tags = ["minimal", "clean", "blog", "responsive", "personal", "simple", "minimalist", "portfolio", "dark", "privacy"]
-features = ["blog", "Clean and minimal", "Responsive", "Social media links", "Syntax highlighting", "Privacy", "GitHub integration", "Random Footers", "Reading Time"]
+description = "Crisp, minimal, personal website and blog theme for Hugo."
+homepage = "https://github.com/chollinger93/ink-free"
+tags = ["minimal", "clean", "blog", "responsive", "personal", "simple", "minimalist", "portfolio", "dark", "privacy", "tech", "reading time", "statistics"]
+features = ["blog", "Clean and minimal", "Responsive", "Social media links", "Syntax highlighting", "Privacy", "GitHub integration", "Random Footers", "Reading Time", "Floating Table of Contents", "Statistics"]
 min_version = "0.87.0"
 
 [author]
