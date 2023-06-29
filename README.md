@@ -1,5 +1,7 @@
 # Ink-Free
 
+[!["Example"](images/shield-example.svg)](https://chollinger.com/blog)![](https://themes.gohugo.io/themes/ink-free/) [![Minimum Hugo Version](https://img.shields.io/static/v1?label=HUGO-version&message=>=0.87.0&color=blue&logo=hugo)](https://github.com/gohugoio/hugo/releases/tag/v0.87.0) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Crisp, minimal personal website and blog theme Hugo, designed for a collaborative, open-source, privacy conscious blog.
 
 Forked from [knadh](https://github.com/knadh/hugo-ink) with custom adjustments. Originally forked from [Ezhil](https://github.com/vividvilla/ezhil).
@@ -33,7 +35,7 @@ And some **bugfixes**:
 
 ### Overview
 
-![Screenshot](https://raw.githubusercontent.com/chollinger93/ink-free/master/images/screenshot.png "Ink-Free theme")
+![Screenshot](images/screenshot.png "Ink-Free theme")
 
 ![image-20230620151830930](images/screenshot2.png)
 
