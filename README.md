@@ -39,6 +39,8 @@ And some **bugfixes**:
 
 ![image-20230620151830930](images/screenshot2.png)
 
+![Dark Mode](images/dark_mode.png "Dark mode")
+
 ### Table Of Contents Options
 
 #### Floating
