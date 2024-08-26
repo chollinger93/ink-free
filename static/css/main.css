@@ -626,3 +626,7 @@ code {
   }
   
 
+/* For https://github.com/martignoni/hugo-notice */
+.notice {
+    width: 85%;
+}

@@ -4,7 +4,7 @@
     {{ if gt .Params.tags 0 }}
     <ul class="flat">
         {{ range .Params.tags }}
-        {{ $tagUrl := "/tags/"}}
+        {{ $tagUrl := "tags/"}}
         <li class="tag-li"><a href="{{ $tagUrl | relLangURL }}{{ . | urlize }}">{{ . }}</a>
         </li>
         {{ end }}
