@@ -7,7 +7,7 @@ countwords }}
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 
 <h1>Statistics</h1>
-<p><b>{{ $scratch.Get "wordcount" | lang.NumFmt 0 }}</b> words published over {{len $pages }} articles since
+<p><b>{{ $scratch.Get "wordcount" | lang.FormatNumberCustom 0 }}</b> words published over {{len $pages }} articles since
     {{ range last 1 $pages }}
     {{ .Date.Month }} {{ .Date.Year }}.
     {{ end }}
@@ -15,7 +15,7 @@ countwords }}
 {{ $readingMins := div ($scratch.Get "wordcount") .Site.Params.wpm }}
 <p>Reading all that should take you about {{ $readingMins }} minutes
     {{ if gt $readingMins 60 }}
-    (or ~{{div $readingMins 60.0 | lang.NumFmt 1 }} hrs).
+    (or ~{{div $readingMins 60.0 | lang.FormatNumberCustom 1 }} hrs).
     {{else}}
     .
     {{end}}
@@ -23,7 +23,7 @@ countwords }}
 <p>
     For reference, that's about {{div ($scratch.Get "wordcount") (.Site.Params.referenceBookWords | default
     95356.0 ) |
-    lang.NumFmt 1 }}x "{{
+    lang.FormatNumberCustom 1 }}x "{{
     .Site.Params.referenceBook |
     default "The Hobbit"}}" by {{ .Site.Params.referenceAuthor | default "J. R. R. Tolkien"}}.
 </p>
