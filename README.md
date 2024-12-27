@@ -24,6 +24,7 @@ As well as some additional **features**:
 - Added `inlineimg` shortcode to render images (e.g. SVGs) in-line
 - Added support for `![](image title="title")` syntax for image titles
 - Random, somewhat humorous messages at the end of each post
+- Added support for [mermaid](https://mermaid.js.org/) diagrams (*loads via CDN by default, can be set via `mermaidCDN`*)
 
 And some **bugfixes**:
 - Modified the CSS to
@@ -86,7 +87,7 @@ cd into your hugo site's root directory and:
 
 ```sh
 cd themes
-git submodule add https://github.com/chollinger93/ink-free 
+git submodule add https://github.com/chollinger93/ink-free
 ```
 
 For more information read the [official setup guide](https://gohugo.io/overview/installing/) of Hugo.

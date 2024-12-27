@@ -18,6 +18,7 @@ copyright = "© Copyright notice"
 	#avatar = "https://image.freepik.com/free-vector/young-man-head-with-beard-avatar-character_24877-36786.jpg"
 
 	featherIconsCDN = false
+	mermaidCDN = "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs"
 
 	# Site color - dark/light/auto
 	mode = "auto"
@@ -36,7 +37,7 @@ copyright = "© Copyright notice"
 	wpm = 250
 
 	# Stupid footers :)
-	footers = [ 
+	footers = [
 		"What Tiger King can teach us about x86 Assembly",
 		"10 Reasons why gcc SHOULD be re-written in JavaScript - You won't believe #8!"
 	]
@@ -104,4 +105,4 @@ url = "/index.xml"
   [markup.tableOfContents]
     endLevel = 3
     ordered = true
-    startLevel = 2 
+    startLevel = 2

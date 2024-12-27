@@ -8,3 +8,39 @@
 {{- with .Site.Params.Social -}}
 <script>feather.replace()</script>
 {{- end -}}
+
+{{ if .Store.Get "hasMermaid" }}
+{{ $jsUrl:= default "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs" .Site.Params.mermaidCDN }}
+<script type="module">
+	import mermaid from {{ $jsUrl }};
+
+	const getMermaidTheme = () => {
+		const savedScheme = localStorage.getItem('scheme');
+		if (savedScheme) {
+			return savedScheme === 'dark' ? 'dark' : 'default';
+		}
+		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+	};
+
+	mermaid.initialize({
+		startOnLoad: true,
+		theme: getMermaidTheme()
+	});
+
+	const applyTheme = () => {
+		const newTheme = getMermaidTheme();
+		mermaid.initialize({
+			startOnLoad: true,
+			theme: newTheme
+		});
+	};
+
+	window.addEventListener('storage', (event) => {
+		if (event.key === 'scheme') {
+			applyTheme();
+		}
+	});
+
+	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
+</script>
+{{ end }}
