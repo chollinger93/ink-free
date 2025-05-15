@@ -4,18 +4,19 @@
 	{{- $title := ( .Title ) -}}
 	{{- $siteTitle := ( .Site.Title ) -}}
 	{{- if .IsHome -}}
-		<title>{{ $siteTitle }} {{ if isset .Site.Params "subtitle" }}- {{ .Site.Params.Subtitle }}{{ end }} </title>
+	<title>{{ $siteTitle }} {{ if isset .Site.Params "subtitle" }}- {{ .Site.Params.Subtitle }}{{ end }} </title>
 	{{- else -}}
-		<title>{{ $title }} - {{ $siteTitle }}</title>
+	<title>{{ $title }} - {{ $siteTitle }}</title>
 	{{- end -}}
 
 	{{- if isset .Site.Params "favicon" -}}
-		<link rel="icon" type="image/png" href={{ .Site.Params.favicon }} />
+	<link rel="icon" type="image/png" href={{ .Site.Params.favicon }} />
 	{{- end -}}
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	{{ with .OutputFormats.Get "rss" -}}
-		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+	{{ printf `
+	<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 	{{ end -}}
 
 	{{- template "_internal/schema.html" . -}}
@@ -24,21 +25,30 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/normalize.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/main.css" />
 	{{- if isset .Site.Params "customcss" }}
-		<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}{{ .Site.Params.customCSS }}" />
+	<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}{{ .Site.Params.customCSS }}" />
 	{{ end }}
 
-        <link id="dark-scheme" rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/dark.css" />
-        {{- if isset .Site.Params "customdarkcss" }}
-                <link id="dark-scheme" rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}{{ .Site.Params.customDarkCSS }}" />
-        {{- end }}
-
-	{{ if and (isset .Site.Params "social") (isset .Site.Params "feathericonscdn") (eq .Site.Params.featherIconsCDN true) -}}
-		<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<link id="dark-scheme" rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/dark.css" />
+	{{- if isset .Site.Params "customdarkcss" }}
+	<link id="dark-scheme" rel="stylesheet" type="text/css"
+		href="{{ .Site.BaseURL }}{{ .Site.Params.customDarkCSS }}" />
+	{{- end }}
+	{{- $enableUmami := and (isset .Site.Params "enableumami") (.Site.Params.enableUmami) -}}
+	{{- $hasURL := isset .Site.Params "umamiurl" -}}
+	{{- $hasID := isset .Site.Params "umamiwebsiteid" -}}
+	{{- if and $enableUmami $hasURL $hasID -}}
+	<script defer src="{{ .Site.Params.umamiURL }}" data-website-id="{{ .Site.Params.umamiWebsiteId }}"
+		data-tag="blog"></script>
+	{{- end -}}
+	{{ if and (isset .Site.Params "social") (isset .Site.Params "feathericonscdn") (eq .Site.Params.featherIconsCDN
+	true) -}}
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 	{{- else if (isset .Site.Params "social") -}}
-		<script src="{{ .Site.BaseURL }}js/feather.min.js"></script>
+	<script src="{{ .Site.BaseURL }}js/feather.min.js"></script>
 	{{ end }}
-		<script src="{{ .Site.BaseURL }}js/main.js"></script>
+	<script src="{{ .Site.BaseURL }}js/main.js"></script>
 	{{- if isset .Site.Params "customjs" -}}
-		{{- range .Site.Params.customJS }}<script src="{{ $.Site.BaseURL }}{{ . }}"></script>{{- end }}
+	{{- range .Site.Params.customJS }}
+	<script src="{{ $.Site.BaseURL }}{{ . }}"></script>{{- end }}
 	{{- end }}
 </head>

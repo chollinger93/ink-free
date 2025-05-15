@@ -1,6 +1,9 @@
 # Ink-Free
 
-[!["Example"](images/shield-example.svg)](https://chollinger.com/blog)![](https://themes.gohugo.io/themes/ink-free/) [![Minimum Hugo Version](https://img.shields.io/static/v1?label=HUGO-version&message=>=0.87.0&color=blue&logo=hugo)](https://github.com/gohugoio/hugo/releases/tag/v0.87.0) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[!["Example"](https://img.shields.io/static/v1?label=Example&message=chollinger.com&color=green&logo=hugo)](https://chollinger.com/blog)
+[![Minimum Hugo Version](https://img.shields.io/static/v1?label=HUGO-version&message=>=0.87.0&color=blue&logo=hugo)](https://github.com/gohugoio/hugo/releases/tag/v0.87.0)
+[![ink-free](https://img.shields.io/static/v1?label=ink-free&message=Theme&color=blue&logo=hugo)](ttps://themes.gohugo.io/themes/ink-free/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Crisp, minimal personal website and blog theme Hugo, designed for a collaborative, open-source, privacy conscious blog.
 
@@ -10,7 +13,7 @@ Forked from [knadh](https://github.com/knadh/hugo-ink) with custom adjustments. 
 ## Ink-Free vs Hugo-Ink
 This repository is a purely local (i.e., no CDNs[^1]), simplified version of `hugo-ink` with several **simplifications** for the sake of privacy:
 - Removed all references to Google's font-CDN
-- Removed Analytics code, even if it was controlled by a variable
+- Removed Analytics code, replaced with self-hosted options[^2]
 
 As well as some additional **features**:
 - Added a Back button to all posts
@@ -80,6 +83,7 @@ hugo serve  --themesDir ../..
 * Random footer messages
 * "Edit this on GitHub" button
 * Word count, tags, and an approximate read time in the overview
+* [Umami](https://github.com/umami-software/umami) support
 
 ## Installation
 
@@ -141,3 +145,4 @@ EOF
 Licensed under the MIT license.
 
 [^1]: Note that the Feather CDN can still be enabled, but you can also host it statically.
+[^2]: This theme currently supports [umami](https://github.com/umami-software/umami) for a privacy focused alternative.
