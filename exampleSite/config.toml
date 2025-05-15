@@ -20,6 +20,11 @@ copyright = "© Copyright notice"
 	featherIconsCDN = false
 	mermaidCDN = "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs"
 
+	# Google Analytics alternative
+	enableUmami = false
+	umamiURL = "https://umami.yourdomain/script.js"
+	umamiWebsiteId = "123-456-789"
+
 	# Site color - dark/light/auto
 	mode = "auto"
 
